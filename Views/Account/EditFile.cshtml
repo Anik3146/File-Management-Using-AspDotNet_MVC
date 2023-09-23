@@ -1,0 +1,12 @@
+﻿@model string
+
+<h1>Edit File</h1>
+
+<form method="post" asp-controller="Account" asp-action="SaveEdit">
+    <input type="hidden" name="fileName" value="@ViewBag.FileName" /> <!-- Use ViewBag to pass fileName -->
+    <div class="form-group">
+        <label for="fileContent">File Content</label>
+        <textarea class="form-control" id="fileContent" name="fileContent" rows="10">@Model</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
